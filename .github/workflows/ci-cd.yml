@@ -14,6 +14,7 @@ jobs:
     - name: Build the Docker image
       run: docker build -t app:$(date +"%I:%M-%e%m%G") . --file Dockerfile
     - name: Release tag
+      uses: actions/create-release@latest
       with:
         tag_name: ${{ github.ref }}
         release_name: Release ${{ github.ref }}
