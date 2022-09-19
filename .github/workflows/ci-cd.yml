@@ -12,4 +12,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build -t app:$(date +"%I:%M-%e%m%G") . --file Dockerfile
+      run: docker build -t app:$(date +%I:%M-%e%m%G) . --file Dockerfile
